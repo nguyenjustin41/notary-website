@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Axios from 'axios';
 
 
@@ -70,18 +70,16 @@ const Contact = () => {
         setSubmitted(true)
 
 
-        // Axios.post(url, {
-        //     name: data.name, 
-        //     company: data.company,
-        //     email: data.email, 
-        //     phone: data.phone, 
-        //     mortgage: data.mortgage, 
-        //     message: data.message
-        // })
+        Axios.post(url, {
+            name: data.name, 
+            company: data.company,
+            email: data.email, 
+            phone: data.phone, 
+            mortgage: data.mortgage, 
+            message: data.message
+        })
 
-        // .then(res => {
-        //     console.log(res.data)
-        // })
+   
 
 
         
@@ -124,7 +122,7 @@ const Contact = () => {
                             {/* email & phone div */}
                             <div className='mobile-contact-info flex flex-row justify-center h-[100%] w-[100%] gap-x-[2%]'> 
                                 <div className="mobile-contact-info  w-[50%] h-[100%]">
-                                    <input id="email" value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Email' required/>
+                                    <input id="email"  value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='email' placeholder='*Email' required/>
 
                                 </div>
                                 <div className="mobile-contact-info w-[50%] h-[100%]">

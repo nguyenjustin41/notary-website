@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Axios from 'axios';
 
 
@@ -8,6 +8,7 @@ const Contact = () => {
     const url = "http://localhost:5000/"
     
 
+    const [submitted, setSubmitted] = useState(false)    
 
     const [data, setData] = useState({
         name: "",
@@ -23,10 +24,8 @@ const Contact = () => {
 
     // populates the array of mortages [select mortgage package, ]
     const mortgageOptions = ['Select Mortgage Package', 'Refinance', 'Purchase', "Seller's Package", "Home Equity Loan", "Reverse Mortgage", "Other"]
+    
 
-   
-    
-    
 
     
 
@@ -56,21 +55,29 @@ const Contact = () => {
         
     
     }
+    
 
+    
+    
     const handleSubmit = (e) => {
         // refreshes the page if we don't prevent default
         e.preventDefault();
-
+        
         clear()
+        
+        const email = document.getElementById("email").value
+        console.log(email)
+        setSubmitted(true)
 
-        Axios.post(url, {
-            name: data.name, 
-            company: data.company,
-            email: data.email, 
-            phone: data.phone, 
-            mortgage: data.mortgage, 
-            message: data.message
-        })
+
+        // Axios.post(url, {
+        //     name: data.name, 
+        //     company: data.company,
+        //     email: data.email, 
+        //     phone: data.phone, 
+        //     mortgage: data.mortgage, 
+        //     message: data.message
+        // })
 
         // .then(res => {
         //     console.log(res.data)
@@ -91,54 +98,61 @@ const Contact = () => {
                 </svg>
             </div>
             <h1 className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black text-shadow">Contact Form</h1>
+            {
+                submitted ? 
+                    <div className="flex flex-row justify-center items-center bg-white rounded-2xl shadow-lg p-[10%] mt-[0%] sm:mt-[10%]  md:mt-[5%] ">  
+                        <p className="text-align-center text-center text-[1.5rem]"><span className="text-[2rem] font-bold block">Thank you!</span> <br/> Your submission has been received. A confirmation email has been sent to {document.getElementById("email").value} and I will get back to you as soon as possible.</p>
+                     
+                       
 
-            {/* holds the form card */}
-            <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-2xl shadow-lg h-full mt-[0%] h-[200vh] sm:mt-[10%]  md:mt-[5%]  ">
-                {/* container to hold all form inputs */}
-                <form onSubmit={(e) => handleSubmit(e)} className="mobile-contact-form flex flex-col w-[100%] justify-center items-center h-[100%] p-[8%] gap-y-[5%]  xl:gap-y-[3%] xl:p-[5%]">
-                    {/* name & company div */}
-                    <div className='mobile-contact-info flex flex-row h-[100%] w-[100%] gap-y-[2%] gap-x-[2%]'>
+                    </div> :
+                    <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-2xl shadow-lg h-full mt-[0%] h-[200vh] sm:mt-[10%]  md:mt-[5%]  ">
+                        {/* container to hold all form inputs */}
+                        <form onSubmit={(e) => handleSubmit(e)} className="mobile-contact-form flex flex-col w-[100%] justify-center items-center h-[100%] p-[8%] gap-y-[5%]  xl:gap-y-[3%] xl:p-[5%]">
+                            {/* name & company div */}
+                            <div className='mobile-contact-info flex flex-row h-[100%] w-[100%] gap-y-[2%] gap-x-[2%]'>
 
-                        <div className="mobile-contact-info w-[50%] h-[100%]">
-                            <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Name' required/>
+                                <div className="mobile-contact-info w-[50%] h-[100%]">
+                                    <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Name' required/>
 
-                        </div>
-                        <div className="mobile-contact-info  w-[50%] h-[100%]">
-                            <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Company'/>
+                                </div>
+                                <div className="mobile-contact-info  w-[50%] h-[100%]">
+                                    <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Company'/>
 
-                        </div>
+                                </div>
+                            </div>
+                            {/* email & phone div */}
+                            <div className='mobile-contact-info flex flex-row justify-center h-[100%] w-[100%] gap-x-[2%]'> 
+                                <div className="mobile-contact-info  w-[50%] h-[100%]">
+                                    <input id="email" value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Email' required/>
+
+                                </div>
+                                <div className="mobile-contact-info w-[50%] h-[100%]">
+                                    <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Phone'/>
+
+                                </div>
+                            </div>
+                            <div className='mobile-contact-select h-[100%] w-[100%] bg-grey-color rounded-2xl'>
+                                <select id="mortgage" onChange={(e) => handleDataChange(e)} className="px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2  rounded-2xl text-[1.5rem]" placeholder="Select Mortgage Package" name="types">
+                                
+                                    {   
+                                        // map(element, index) => [...]
+                                        mortgageOptions.map((mortgage, index) => <option value={index}>{mortgage}</option>)
+                                    }
+                                    
+                                </select>
+                            </div>
+                            <div className='h-[100%] w-[100%] bg-grey-color rounded-2xl'>
+                                <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="py-[2%] px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  rounded-2xl border-[#123456] border-solid border-2 text-[1.5rem]" type='text' placeholder='*Message'></textarea>
+                            </div>
+
+                            <div className='mobile-contact-submit flex flex-row h-[100%] w-[100%] '>
+                                <button type="submit" className="flex flex-row justify-center items-center w-[100%] shadow-lg rounded-[50px] font-semibold text-[28px] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Submit</button>
+                            </div>
+
+                        </form>
                     </div>
-                    {/* email & phone div */}
-                    <div className='mobile-contact-info flex flex-row justify-center h-[100%] w-[100%] gap-x-[2%]'> 
-                        <div className="mobile-contact-info  w-[50%] h-[100%]">
-                            <input id="email" value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Email' required/>
-
-                        </div>
-                        <div className="mobile-contact-info w-[50%] h-[100%]">
-                            <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Phone'/>
-
-                        </div>
-                    </div>
-                    <div className='mobile-contact-select h-[100%] w-[100%] bg-grey-color rounded-2xl'>
-                        <select id="mortgage" onChange={(e) => handleDataChange(e)} className="px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2  rounded-2xl text-[1.5rem]" placeholder="Select Mortgage Package" name="types">
-                        
-                            {   
-                                // map(element, index) => [...]
-                                mortgageOptions.map((mortgage, index) => <option value={index}>{mortgage}</option>)
-                            }
-                            
-                        </select>
-                    </div>
-                    <div className='h-[100%] w-[100%] bg-grey-color rounded-2xl'>
-                        <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="py-[2%] px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  rounded-2xl border-[#123456] border-solid border-2 text-[1.5rem]" type='text' placeholder='*Message'></textarea>
-                    </div>
-
-                    <div className='mobile-contact-submit flex flex-row h-[100%] w-[100%] '>
-                        <button type="submit" className="flex flex-row justify-center items-center w-[100%] shadow-lg rounded-[50px] font-semibold text-[28px] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Submit</button>
-                    </div>
-
-                </form>
-            </div>
+            }
       </div>
   ) 
 };

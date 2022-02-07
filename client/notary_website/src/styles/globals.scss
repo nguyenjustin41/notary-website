@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
 html {
   scroll-behavior: smooth;
   padding: 0;
@@ -13,6 +15,11 @@ body {
 
   overflow-y: scroll;
   
+}
+
+.mobile-navbar-logo {
+  font-family: 'Comforter', cursive;
+  font-size: 40px;
 }
 
 a {
@@ -119,7 +126,7 @@ a {
 }
 
 .services-waves .shape-fill {
-  fill: #74C947;
+  fill: #123456;
 }
 
 .process-waves {
@@ -209,7 +216,7 @@ option:first-of-type {
     row-gap: 30px;
   }
   #services-section{
-    flex-direction: column;
+    flex-direction: column-reverse;
     // background-color: red;
     // padding: 30px;
     // margin-top: 15%;
@@ -258,6 +265,7 @@ option:first-of-type {
     width: 80%;
     margin-top: 5%;
     font-size: 20px;
+    transition-duration: 1500ms;
   }
 
 
@@ -348,7 +356,14 @@ option:first-of-type {
     padding: 5%;
     width: 100%;
     margin-top: 10%;
+    transition-duration: 1500ms;
+
+
+
     
+  }
+  .mobile-review-bubble:hover {
+    background-color: #1B4E80;
   }
 
   .mobile-review-name {
@@ -407,15 +422,15 @@ option:first-of-type {
 
   .mobile-navbar-logo {
     display: none;  
+
   }
   .mobile-hero-section {
     margin-top: 57%;
   }
   .mobile-hero-header {
     text-align: center;
-    font-size: 50px;
-    line-height: 55px;
-
+    font-size: 34px;
+    line-height: 40px;
   }
 
   .mobile-navbar-container {
@@ -426,7 +441,7 @@ option:first-of-type {
   
   .mobile-hero-text {
     text-align: center;
-    font-size: 32px;
+    font-size: 20px;
   }
 
   #hero-button {

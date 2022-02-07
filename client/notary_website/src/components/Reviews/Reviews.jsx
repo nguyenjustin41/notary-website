@@ -64,8 +64,8 @@ const Reviews = () => {
                     
                     
                 <div  onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')} 
-                        className={isVisible ? "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[1000ms] opacity-100 " :
-                        "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"
+                        className={isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
+                        "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"
                     }>
                         
                         
@@ -87,8 +87,8 @@ const Reviews = () => {
       
     
                 <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                    className= {isVisible ? "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[2000ms] opacity-100 " :
-                    "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"}>
+                    className= {isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[2000ms] opacity-100 hover:bg-button-color-hover" :
+                    "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"}>
             
                         <div className="flex flex-row justify-start">
                             <img className="rounded-full mr-[10px] drop-shadow-lg" src="/assets/images/pfp-2.jpg" alt="pfp"/>
@@ -110,8 +110,8 @@ const Reviews = () => {
 
                 
                 <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                    className= {isVisible ? "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 " :
-                    "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"}>
+                    className= {isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
+                    "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"}>
                
                         <div className="flex flex-row justify-start ">
                             <img className=" mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-3.jpg" alt="pfp"/>
@@ -129,8 +129,8 @@ const Reviews = () => {
                 {/* 4th review */}
                 <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
                     
-                    className= {isVisible ?   "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer transition-all linear duration-[4000ms] opacity-100":
-                    "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
+                    className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
+                    "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
                     
                 
                         <div className="flex flex-row justify-start">
@@ -151,8 +151,8 @@ const Reviews = () => {
                 </div>
                 {/* 5th review*/}
                 <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                    className= {isVisible ?   "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer transition-all linear duration-[5000ms] opacity-100":
-                    "mobile-review-bubble bg-[#43CC47] h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
+                    className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover":
+                    "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
                
                         <div className="flex flex-row justify-start">
                             <img className="mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-4.png" alt="pfp"/>

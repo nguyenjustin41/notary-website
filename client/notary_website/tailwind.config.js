@@ -27,8 +27,10 @@ module.exports = {
       },
       colors: {
 
-        'button-color': '#74c947',
-        'button-color-hover': '#70c244',
+        // 'button-color': '#74c947',
+        // 'button-color-hover': '#70c244',
+        'button-color': '#123456',
+        'button-color-hover': '#1B4E80',
         'grey-color': '#e5ecee',
       }
     },

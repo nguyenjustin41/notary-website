@@ -244,7 +244,7 @@ app.post('/', (req, res) => {
     const fullMessage = `${name} is requesting a ${mortgage} signing. ${message} // ${company} ${phone} ${email}`
     const msg = {
         to: "nguyenjustin41@gmail.com",
-        from: "jnuggin27@gmail.com",
+        from: "nguyenjustin41@gmail.com",
         subject: `${mortgage} Notary Website Inquiry`,
         text: fullMessage,
       
@@ -256,7 +256,7 @@ app.post('/', (req, res) => {
     
     const confirm_msg = {
         to: email,
-        from: "jnuggin27@gmail.com",
+        from: "nguyenjustin41@gmail.com",
         subject: `Confirmation: Your message has been received!`,
         html: email_template
         // html: `<h1>Thank you ${name}</h1> for submitting your message. We will get back to you shortly. <br> For a quicker response, please call or text 626-566-5705.`

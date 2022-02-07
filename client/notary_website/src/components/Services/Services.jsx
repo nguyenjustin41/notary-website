@@ -12,7 +12,7 @@ const Services = () => {
               </svg>
           </div>
           <div className="flex flex-row justify-center">
-            <h1 className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black mb-[25%]">Services</h1>
+            <h1 className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black mb-[18%]">My Closing Services</h1>
           
 
           </div>
@@ -29,19 +29,19 @@ const Services = () => {
                   </div>
 
                   <div className="flex flex-col justify-center gap-y-[2rem] mb-[30px] -tracking-[0.64px] w-[75%] ">
-                    <div className="flex flex-row justify-center  bg-[#74c947] text-white rounded-2xl p-[30px] shadow-lg ">
+                    <div  onClick={() => window.location.replace("/#contact")}  className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
                       <FaHome className="mobile-icon-type text-yellow-400 items-center text-[3rem] "/>
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Home Purchase</h2>
                     </div>
-                    <div className="flex flex-row justify-center bg-[#74c947] text-white rounded-2xl p-[30px] shadow-lg">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
                       <FaExchangeAlt className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Mortgage Refinance</h2>
                     </div>
-                    <div className="flex flex-row justify-center bg-[#74c947] text-white rounded-2xl p-[30px]  shadow-lg">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
                       <FaFileSignature className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Seller's Package</h2>
                     </div>
-                    <div className="flex flex-row justify-center bg-[#74c947] text-white rounded-2xl p-[30px] shadow-lg">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
                       <FaMoneyCheckAlt className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Home Equity Loan</h2>
                     </div>

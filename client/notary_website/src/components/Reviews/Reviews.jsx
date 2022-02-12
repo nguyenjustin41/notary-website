@@ -63,13 +63,13 @@ const Reviews = () => {
            
                     
                     
-                <div  onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')} 
+                <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')} 
                         className={isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
                         "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"
                     }>
                         
                         
-                        <div className="flex flex-row justify-start  no-flicker">
+                        <div className="flex flex-row justify-start no-flicker">
                             <img className="mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-1.jpg" alt="pfp"/>
                             <div className="flex flex-col items-start">
                                 <h2 className="mobile-review-name text-[20px] text-[white] text-shadow">Matilda D.</h2>

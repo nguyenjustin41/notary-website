@@ -10,7 +10,7 @@ const Navbar = ( { show, setShow } ) => {
   const location = useLocation();
   const [locationPath, setLocationPath] = useState("/")
   useEffect(() => {
-    console.log(location.pathname)
+ 
     setLocationPath(location.pathname)
   }, [location])
   return (

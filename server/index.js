@@ -275,13 +275,15 @@ app.post('/fees', (req, res) => {
   try {
     // receives the zip code from the user input when you press submit button
     const { zip } = req.body
-    console.log('calculating the distance')
+    
     console.log(`user zipcode : ${zip}`)
     // calculates the distance between the zipcodes in miles
     let distanceZip = zipcodes.distance(myZip, zip)
     // rough estimate rounding up the miles 
-    const miles = Math.ceil(distanceZip + (distanceZip * 0.50))
- 
+    let miles = Math.ceil(distanceZip + (distanceZip * 0.50))
+    console.log(`distance calculated miles: ${miles}`)
+    let kilometers = zipcodes.toKilometers(miles)
+    console.log(`distance calculated kilometers: ${kilometers}`)
     res.status(200).json(miles)
 
   } catch (error) {

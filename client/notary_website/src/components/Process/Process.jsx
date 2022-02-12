@@ -22,6 +22,7 @@ const Process = () => {
 
         </div>
         {/* Vertical timeline contents */}
+        {/* https://aleksandarpopovic.com/Build-Simple-Timeline-in-React/ */}
         <VerticalTimeline>
             {timelineElements.map((element) => {
 
@@ -57,8 +58,16 @@ const Process = () => {
                             {element.title}
                         </h3>
 
+
+
     
                         <p id="description" className="text-[25px]">{element.description}</p>
+
+                        {isDollarIcon ? 
+                        <div className="flex flex-row justify-center items-center mt-[2%]">
+
+                            <button className="flex flex-row justify-center py-[2%] rounded-[5px] w-[100%] shadow-lg text-[23px] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap text-shadow hover:bg-button-color-hover" onClick={()=> window.open("/fees")}>Calculate Fee Estimate</button> 
+                        </div> : ""}
                 
                     </VerticalTimelineElement>
                 )

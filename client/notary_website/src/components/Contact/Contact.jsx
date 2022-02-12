@@ -3,6 +3,8 @@ import Axios from 'axios';
 
 
 
+
+
 const Contact = () => {
     
     const url = "http://localhost:5000/"
@@ -104,34 +106,34 @@ const Contact = () => {
                        
 
                     </div> :
-                    <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-2xl shadow-lg h-full mt-[0%] h-[200vh] sm:mt-[10%]  md:mt-[5%]  ">
+                    <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-[5px] shadow-lg h-full mt-[0%] h-[200vh] sm:mt-[10%]  md:mt-[5%]  ">
                         {/* container to hold all form inputs */}
                         <form onSubmit={(e) => handleSubmit(e)} className="mobile-contact-form flex flex-col w-[100%] justify-center items-center h-[100%] p-[8%] gap-y-[5%]  xl:gap-y-[3%] xl:p-[5%]">
                             {/* name & company div */}
                             <div className='mobile-contact-info flex flex-row h-[100%] w-[100%] gap-y-[2%] gap-x-[2%]'>
 
                                 <div className="mobile-contact-info w-[50%] h-[100%]">
-                                    <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='*Name' required/>
+                                    <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" type='text' placeholder='*Name' required/>
 
                                 </div>
                                 <div className="mobile-contact-info  w-[50%] h-[100%]">
-                                    <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Company'/>
+                                    <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" type='text' placeholder='Company'/>
 
                                 </div>
                             </div>
                             {/* email & phone div */}
                             <div className='mobile-contact-info flex flex-row justify-center h-[100%] w-[100%] gap-x-[2%]'> 
                                 <div className="mobile-contact-info  w-[50%] h-[100%]">
-                                    <input id="email"  value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='email' placeholder='*Email' required/>
+                                    <input id="email"  value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" type='email' placeholder='*Email' required/>
 
                                 </div>
                                 <div className="mobile-contact-info w-[50%] h-[100%]">
-                                    <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2 rounded-2xl text-[1.5rem]" type='text' placeholder='Phone'/>
+                                    <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" type='text' placeholder='Phone'/>
 
                                 </div>
                             </div>
                             <div className='mobile-contact-select h-[100%] w-[100%] bg-grey-color rounded-2xl'>
-                                <select id="mortgage" onChange={(e) => handleDataChange(e)} className="px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  border-[#123456] border-solid border-2  rounded-2xl text-[1.5rem]" placeholder="Select Mortgage Package" name="types">
+                                <select id="mortgage" onChange={(e) => handleDataChange(e)} className="px-[2%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" placeholder="Select Mortgage Package" name="types">
                                 
                                     {   
                                         // map(element, index) => [...]
@@ -140,12 +142,12 @@ const Contact = () => {
                                     
                                 </select>
                             </div>
-                            <div className='h-[100%] w-[100%] bg-grey-color rounded-2xl'>
-                                <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="py-[2%] px-[2%] w-[100%] h-[100%] bg-grey-color shadow-lg  rounded-2xl border-[#123456] border-solid border-2 text-[1.5rem]" type='text' placeholder='*Message'></textarea>
+                            <div className='h-[100%] w-[100%] bg-grey-color '>
+                                <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="py-[2%] px-[2%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[1.5rem]" type='text' placeholder='*Message'></textarea>
                             </div>
 
                             <div className='mobile-contact-submit flex flex-row h-[100%] w-[100%] '>
-                                <button type="submit" className="flex flex-row justify-center items-center w-[100%] shadow-lg rounded-[50px] font-semibold text-[28px] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Submit</button>
+                                <button type="submit" className="flex flex-row justify-center items-center w-[100%] shadow-lg rounded-[5px] font-semibold text-[28px] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Submit</button>
                             </div>
 
                         </form>

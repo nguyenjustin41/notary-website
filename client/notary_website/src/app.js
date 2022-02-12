@@ -1,7 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
 import './styles/globals.css'
 import './styles/globals.scss'
-import { HeroSection, Mobilebar, Navbar, Process, Services, Reviews, Contact } from './components/index'
+import { Mobilebar, Navbar, Home, Fees, ScrollUpButton } from './components/index'
+
+
 
 
 
@@ -13,19 +18,23 @@ const App = () => {
 
 
     return (
-              <div>
-                  <Mobilebar show={show} setShow={setShow}/>
-                 
-                  <Navbar show={show} setShow={setShow}/>
-                  <HeroSection/>
+            <Router>
+                <div>
+                        <ScrollUpButton />
+                        <Mobilebar show={show} setShow={setShow}/>
+                        <Navbar show={show} setShow={setShow}/>
+                        <Routes>
+                            <Route path="*" element={<Navigate to="/"/>}/>
 
-        
+                            <Route path="/" exact element={<Home/>}/>
+                            <Route path="/fees" exact element={<Fees/>}/>
+                            
 
-                  <Process/>
-                  <Services/>
-                  <Reviews />
-                  <Contact />
-              </div>
+
+                            
+                        </Routes>
+                </div>
+            </Router>
 
               
     )

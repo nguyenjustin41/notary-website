@@ -1,7 +1,8 @@
-import express from 'express';
+import express, { response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import sgMail from '@sendgrid/mail'
+import zipcodes from 'zipcodes'
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(cors()); //utilize Cors so the browser doesn't restrict data, without it
 
 app.use(express.json()) // accept data in json format
 app.use(express.urlencoded()); // decode data sent thru html form 
-
+// app.use('/fees', feesRoutes)
 app.get('/', (req, res) => {
     res.send("Welcome to the Sendgrid Emailing Server"); 
 });
@@ -188,7 +189,7 @@ app.post('/', (req, res) => {
           <td style="padding:0px;margin:0px;border-spacing:0;"><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="efe5a2c4-1b11-49e7-889d-856d80b40f63" data-mc-module-version="2019-10-22">
     <tbody>
       <tr>
-        <td style="padding:40px 10px 30px 10px; line-height:36px; text-align:inherit; background-color:#74c947;" height="100%" valign="top" bgcolor="#74c947" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="color: #ffffff; font-family: &quot;trebuchet ms&quot;, helvetica, sans-serif; font-size: 24px"><strong>Your notary inquiry has been received!</strong></span><span style="color: #ffffff; font-family: &quot;trebuchet ms&quot;, helvetica, sans-serif; font-size: 30px"><strong>&nbsp;</strong></span></div><div></div></div></td>
+        <td style="padding:40px 10px 30px 10px; line-height:36px; text-align:inherit; background-color:#123456;" height="100%" valign="top" bgcolor="#123456" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="color: #ffffff; font-family: &quot;trebuchet ms&quot;, helvetica, sans-serif; font-size: 24px"><strong>Your notary inquiry has been received!</strong></span><span style="color: #ffffff; font-family: &quot;trebuchet ms&quot;, helvetica, sans-serif; font-size: 30px"><strong>&nbsp;</strong></span></div><div></div></div></td>
       </tr>
     </tbody>
     </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="efe5a2c4-1b11-49e7-889d-856d80b40f63.2" data-mc-module-version="2019-10-22">
@@ -267,7 +268,27 @@ app.post('/', (req, res) => {
   
 
 })
+// calculate the distance in miles and send it back to the front end
+app.post('/fees', (req, res) => {
+  const myZip = process.env.ZIP_CODE;
 
+  try {
+    // receives the zip code from the user input when you press submit button
+    const { zip } = req.body
+    console.log('calculating the distance')
+    console.log(`user zipcode : ${zip}`)
+    // calculates the distance between the zipcodes in miles
+    let distanceZip = zipcodes.distance(myZip, zip)
+    // rough estimate rounding up the miles 
+    const miles = Math.ceil(distanceZip + (distanceZip * 0.50))
+ 
+    res.status(200).json(miles)
+
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: 'Something went wrong with calculating the distance' })
+  }
+})
 
 
 

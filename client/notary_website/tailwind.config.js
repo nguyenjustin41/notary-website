@@ -34,6 +34,18 @@ module.exports = {
         'grey-color': '#e5ecee',
       }
     },
+    keyframes: {
+      bounce: {
+        '0%, 100%': {
+          transform: 'translateY(-10%)',
+          animationTimingFunction: 'linear',
+        },
+        '50%': {
+          transform: 'none',
+          animationTimingFunction: 'linear'
+        }
+      }
+    }
   },
   plugins: [],
 }

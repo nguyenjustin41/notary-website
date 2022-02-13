@@ -12,9 +12,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: #e5ecee;
-
   overflow-y: scroll;
-  
+
 }
 
 .mobile-navbar-logo {
@@ -60,7 +59,7 @@ a {
 }
 
 #paper_document {
-  
+
   animation: bounceForever 2s ease-in-out infinite;
 
   
@@ -263,7 +262,7 @@ option:first-of-type {
     // background-color: red;
     // padding: 30px;
     // margin-top: 15%;
-    row-gap: 5vw;
+    row-gap: 10vh !important;
   }
 }
 

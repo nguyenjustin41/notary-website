@@ -20,6 +20,10 @@ const App = () => {
     return (
             <Router>
                 <div>
+                    {/* https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/
+                    
+                        
+                    */}
                         <ScrollUpButton />
                         <Mobilebar show={show} setShow={setShow}/>
                         <Navbar show={show} setShow={setShow}/>

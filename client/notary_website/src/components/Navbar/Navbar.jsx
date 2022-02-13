@@ -15,7 +15,7 @@ const Navbar = ( { show, setShow } ) => {
   }, [location])
   return (
       <> 
-        <nav className="relative transition-all ease-in-out duration-700 z-[102] h-[80px] top-0 sticky flex flex-wrap items-center text-base justify-center px-5 py-5 text-white bg-white shadow-lg ">
+        <nav className="relative transition-all ease-in-out duration-700 z-[102] h-[80px] top-0 sticky flex flex-wrap items-center text-base justify-center px-0 py-5 text-white bg-white shadow-lg ">
           <div className="mobile-navbar-container flex justify-center md:flex justify-between px-[24px] h-[100%] z-[1] w-full max-w-[1100px]">
 
             <a href="/" className="mobile-navbar-logo flex text-black gap-x-[5px] justify-self-start pb-[5px] cursor-pointer text-xl items-center font-bold text-[26px] hover:text-button-color-hover" alt="black pen icon">JN Notary <span className="text-[26px] mb-[20px]"><FaPenAlt /></span></a>
@@ -23,7 +23,7 @@ const Navbar = ( { show, setShow } ) => {
             {/* Mobile Desktop Navmenu*/}
 
 
-            <div className="flex pr-[10px] md:hidden">
+            <div className="flex pr-[10px] lg:hidden">
               <button onClick={() => window.open('tel:6265665705', '_self')} 
               className="space-x-2 rounded-[10px] font-semibold text-[16px] text-white outline-hidden flex items-center cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover hover:text-yellow-400 ">
                
@@ -36,7 +36,7 @@ const Navbar = ( { show, setShow } ) => {
             </div>
             {
               locationPath === '/' ?  
-                <div className="mobile-navbar-hamburger text-black flex text-[1.8rem] pt-[4px] cursor-pointer  hover:text-button-color-hover md:hidden">
+                <div className="mobile-navbar-hamburger text-black flex text-[1.8rem] pt-[4px] cursor-pointer  hover:text-button-color-hover lg:hidden">
                 
                     <FaBars alt="menu icon" onClick={() => setShow(!show)}/>
                 
@@ -55,7 +55,7 @@ const Navbar = ( { show, setShow } ) => {
 
               {
                 locationPath === '/' ?
-              <ul className="hidden md:flex items-center list-none text-center mr-[-22px]">
+              <ul className="hidden lg:flex items-center list-none text-center mr-[-22px]">
               <li className="">
                 <a href="#process" className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Process</a>
               </li>
@@ -79,7 +79,7 @@ const Navbar = ( { show, setShow } ) => {
             
 
 
-            <div className="hidden md:flex flex-row space-between items-center list-none text-center mr-[-22px]">
+            <div className="hidden lg:flex flex-row space-between items-center list-none text-center mr-[0px]">
               <button onClick={() => window.open('tel:6265665705', '_self')} 
               className="space-x-2 rounded-[10px] font-semibold text-[16px] text-white outline-hidden flex items-center cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover hover:text-yellow-400 ">
                

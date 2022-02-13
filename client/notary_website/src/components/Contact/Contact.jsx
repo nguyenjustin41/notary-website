@@ -115,7 +115,7 @@ const Contact = () => {
                         </div>
                         
                     </div> :
-                    <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-[5px] shadow-lg h-full mt-[0%] h-[200vh] sm:mt-[10%]  md:mt-[5%]  ">
+                    <div className="flex flex-row justify-center items-center w-[100%] bg-white rounded-[5px] shadow-lg h-full mt-[0%] sm:mt-[10%]  md:mt-[5%]  ">
                         {/* container to hold all form inputs */}
                         <form onSubmit={(e) => handleSubmit(e)} className="mobile-contact-form flex flex-col w-[100%] justify-center items-center h-[100%] p-[8%] gap-y-[5%]  xl:gap-y-[3%] xl:p-[5%]">
                             {/* name & company div */}

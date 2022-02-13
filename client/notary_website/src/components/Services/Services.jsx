@@ -17,7 +17,7 @@ const Services = () => {
 
           </div>
 
-          <div id="services-section" className="flex flex-row-reverse w-[100%] h-[100%] px-[10%] gap-x-[3rem] justify-center items-center ">
+          <div id="services-section" className="flex flex-row-reverse w-[100%] h-[100%] px-[10%] gap-x-[3rem] gap-y-[10vh] justify-center items-center ">
             
           {/* Types of Signing Card */}
             <div className="mobile-service-card flex flex-col gap-y-[2rem] items-center bg-[#ffffff] h-[100%] w-[100%] rounded-2xl shadow-lg ">

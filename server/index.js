@@ -8,8 +8,14 @@ const app = express();
 
 dotenv.config()
 
-const PORT = process.env.PORT || 5000;
-app.use(cors()); //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
+const PORT = process.env.PORT;
+app.use(cors({
+  origin: "https://dreamy-mirzakhani-2092fd.netlify.app",
+  methods: ["GET", "POST"],
+}
+
+
+)); //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
 
 app.use(express.json()) // accept data in json format
 app.use(express.urlencoded()); // decode data sent thru html form 
@@ -244,8 +250,8 @@ app.post('/', (req, res) => {
 
     const fullMessage = `${name} is requesting a ${mortgage} signing. ${message} // ${company} ${phone} ${email}`
     const msg = {
-        to: "nguyenjustin41@gmail.com",
-        from: "nguyenjustin41@gmail.com",
+        to: process.env.EMAIL,
+        from: process.env.EMAIL,
         subject: `${mortgage} Notary Website Inquiry`,
         text: fullMessage,
       
@@ -257,7 +263,7 @@ app.post('/', (req, res) => {
     
     const confirm_msg = {
         to: email,
-        from: "nguyenjustin41@gmail.com",
+        from: process.env.EMAIL,
         subject: `Confirmation: Your message has been received!`,
         html: email_template
         // html: `<h1>Thank you ${name}</h1> for submitting your message. We will get back to you shortly. <br> For a quicker response, please call or text 626-566-5705.`

@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 const Contact = () => {
     
-    const url = "http://localhost:5000/"
+    const url = "https://jn-notary.herokuapp.com"
     
 
     const [submitted, setSubmitted] = useState(false)    

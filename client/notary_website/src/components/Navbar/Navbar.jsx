@@ -15,7 +15,7 @@ const Navbar = ( { show, setShow } ) => {
   }, [location])
   return (
       <> 
-        <nav className="relative transition-all ease-in-out duration-700 z-[102] h-[80px] top-0 sticky flex flex-wrap items-center text-base justify-center px-0 py-5 text-white bg-white shadow-lg ">
+        <nav className="relative transition-all ease-in-out duration-700 z-[102] h-[80px] w-[100%] top-0 sticky flex flex-wrap items-center text-base justify-center px-0 py-5 text-white bg-white shadow-lg ">
           <div className="mobile-navbar-container flex justify-center md:flex justify-between px-[24px] h-[100%] z-[1] w-full max-w-[1100px]">
 
             <a href="/" className="mobile-navbar-logo flex text-black gap-x-[5px] justify-self-start pb-[5px] cursor-pointer text-xl items-center font-bold text-[26px] hover:text-button-color-hover" alt="black pen icon">JN Notary <span className="text-[26px] mb-[20px]"><FaPenAlt /></span></a>

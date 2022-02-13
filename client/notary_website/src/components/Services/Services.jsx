@@ -12,7 +12,7 @@ const Services = () => {
               </svg>
           </div>
           <div className="flex flex-row justify-center">
-            <h1 className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black mb-[18%]">My Closing Services</h1>
+            <h1 className="mobile-header -tracking-[0.64px] text-[64px] font-bold text-black mb-[18%]">My Closing Services</h1>
           
 
           </div>

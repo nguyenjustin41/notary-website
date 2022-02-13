@@ -53,7 +53,7 @@ const Reviews = () => {
             </div>
 
        
-                <h1 ref={containerRef} className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black text-shadow">Reviews</h1> 
+                <h1 ref={containerRef} className="mobile-header -tracking-[0.64px] text-[64px] font-bold text-black text-shadow">Reviews</h1> 
 
            
             <div className="mobile-review-container flex flex-row justify-center h-[100%] w-[100%] flex-wrap gap-x-[1%] p-[5%] no-flicker" >

@@ -18,7 +18,7 @@ const Process = () => {
         </div>
         {/* Header */}
         <div className="flex flex-row justify-center items-center">
-            <h1 className="mobile-header -tracking-[0.64px] text-[64px] text-[#ffffff] leading-[52px] mb-[50px] font-bold text-shadow" >How does it work?</h1>
+            <h1 className="mobile-header -tracking-[0.64px] text-[64px] text-[#ffffff] mb-[50px] font-bold text-shadow" >How does it work?</h1>
 
         </div>
         {/* Vertical timeline contents */}

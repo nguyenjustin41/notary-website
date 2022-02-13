@@ -26,8 +26,8 @@ const App = () => {
                         <Routes>
                             <Route path="*" element={<Navigate to="/"/>}/>
 
-                            <Route path="https://dreamy-mirzakhani-2092fd.netlify.app" exact element={<Home/>}/>
-                            <Route path="https://dreamy-mirzakhani-2092fd.netlify.app/fees" exact element={<Fees/>}/>
+                            <Route path="/" exact element={<Home/>}/>
+                            <Route path="/fees" exact element={<Fees/>}/>
                             
 
 

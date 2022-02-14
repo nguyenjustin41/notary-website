@@ -17,31 +17,31 @@ const Services = () => {
 
           </div>
 
-          <div id="services-section" className="flex flex-row-reverse w-[100%] h-[100%] px-[10%] gap-x-[3rem] gap-y-[10vh] justify-center items-center ">
+          <div id="services-section" className="flex flex-row-reverse w-[100%] h-[100%] px-[10%] justify-center items-center ">
             
-          {/* Types of Signing Card */}
-            <div className="mobile-service-card flex flex-col gap-y-[2rem] items-center bg-[#ffffff] h-[100%] w-[100%] rounded-2xl shadow-lg ">
+            {/* Mortgage Packages Card */}
+            <div className="mobile-service-card flex flex-col  items-center bg-[#ffffff] ml-[0%] mt-[5%] 3xl:mt-[0%] 3xl:ml-[5%] h-[100%] w-[100%] rounded-2xl shadow-lg ">
               
              
                   <div className="justify-start mt-[3%]">
-                      <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41]">Mortgage Packages</h1>
+                      <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41] pb-[2rem] ">Mortgage Packages</h1>
 
                   </div>
 
-                  <div className="flex flex-col justify-center gap-y-[2rem] mb-[30px] -tracking-[0.64px] w-[75%] ">
-                    <div  onClick={() => window.location.replace("/#contact")}  className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
+                  <div className="flex flex-col justify-center mb-[30px] -tracking-[0.64px] w-[75%] ">
+                    <div  onClick={() => window.location.replace("/#contact")}  className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] mb-[2rem] shadow-lg hover:bg-button-color-hover">
                       <FaHome className="mobile-icon-type text-yellow-400 items-center text-[3rem] "/>
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Home Purchase</h2>
                     </div>
-                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] mb-[2rem] shadow-lg hover:bg-button-color-hover">
                       <FaExchangeAlt className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Mortgage Refinance</h2>
                     </div>
-                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] mb-[2rem] shadow-lg hover:bg-button-color-hover">
                       <FaFileSignature className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Seller's Package</h2>
                     </div>
-                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] shadow-lg hover:bg-button-color-hover">
+                    <div onClick={() => window.location.replace("/#contact")} className="flex flex-row justify-center cursor-pointer bg-button-color text-white rounded-2xl p-[30px] mb-[2rem] shadow-lg hover:bg-button-color-hover">
                       <FaMoneyCheckAlt className="mobile-icon-type text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Home Equity Loan</h2>
                     </div>
@@ -52,28 +52,28 @@ const Services = () => {
 
             
             {/* What we provide card */}
-              <div className="mobile-service-card flex flex-col gap-y-[2rem] items-center bg-[#ffffff] w-[100%] h-[100%]  rounded-2xl shadow-lg">
+              <div className="mobile-service-card flex flex-col items-center bg-[#ffffff] w-[100%] h-[100%]  rounded-2xl shadow-lg">
                 
                 <div className="justify-start mt-[3%]">
-                    <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41] ">Includes</h1>
+                    <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41] pb-[2rem] ">Includes</h1>
 
                 </div>
 
-                <div className="flex flex-col justify-center gap-y-[2rem] mb-[30px] -tracking-[0.64px] w-[75%]">
-                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px]">
+                <div className="flex flex-col justify-center mb-[30px] -tracking-[0.64px] w-[75%]">
+                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px] mb-[2rem] ">
                     <FaCheck className="mobile-icon text-yellow-400 items-center text-[3rem]" />
                     <h2 className="mobile-text text-[32px] font-semibold ml-[1rem] text-shadow">Same Day Scheduling</h2>
                   </div>
 
-                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px]">
+                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px] mb-[2rem] ">
                     <FaCheck className="mobile-icon text-yellow-400 items-center text-[3rem]" />
                     <h2 className="mobile-text text-[32px] font-semibold ml-[1rem] text-shadow">Legal/Letter Printing</h2>
                   </div>
-                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px]">
+                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px] mb-[2rem] ">
                     <FaCheck className="mobile-icon text-yellow-400 items-center text-[3rem]" />
                     <h2 className="mobile-text text-[32px] font-semibold ml-[1rem] text-shadow">Delivery Before Cutoff</h2>
                   </div>
-                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px]">
+                  <div className="flex flex-row justify-center bg-[#ffffff] border-b-2 text-[#363f41] p-[30px] mb-[2rem] ">
                     <FaCheck className="mobile-icon text-yellow-400 items-center text-[3rem]" />
                     <h2 className="mobile-text text-[32px] font-semibold ml-[1rem] text-shadow">Document Scanbacks</h2>
                   </div>

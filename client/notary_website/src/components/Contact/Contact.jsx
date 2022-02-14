@@ -1,12 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Axios from 'axios';
 
 
 
 
 
-const Contact = () => {
+const Contact = ({isVisible, setIsVisible}) => {
+    const containerRef = useRef(null)
+    const callBackFunction = (entries) => {
+        const [ entry ] = entries
+
+        // when the reviews header intersects the screen
+        // this evaluates to true everytime that is the case.. 
+        // *basically this makes the reviews bubble animate once per page refresh
+  
+        if (entry.isIntersecting) {
+            setIsVisible(entry.isIntersecting)
+            
+        }
+    }
     
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+    }
+    
+    
+    
+    useEffect(() => {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+        const observer = new IntersectionObserver(callBackFunction, options) 
+        const contactHeader = containerRef.current
+        observer.observe(contactHeader)
+        
+    },);
+
     const url = "https://jn-notary.herokuapp.com"
     
 
@@ -103,7 +132,7 @@ const Contact = () => {
                     <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
                 </svg>
             </div>
-            <h1 className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black text-shadow mb-[10%] xl:mb-[5%]">Contact Form</h1>
+            <h1 ref={containerRef} className="mobile-header -tracking-[0.64px] text-[64px] leading-[52px] font-bold text-black text-shadow mb-[10%] xl:mb-[5%]">Contact Form</h1>
             {
                 submitted ? 
                     <div className="flex flex-col justify-between items-center bg-white rounded-2xl shadow-lg p-[5%] gap-y-[5%] mt-[0%] sm:mt-[10%]  md:mt-[5%] ">  

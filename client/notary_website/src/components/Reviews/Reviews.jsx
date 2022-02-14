@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useEffect, useRef} from 'react';
 
 
-const Reviews = () => {
+const Reviews = ({isVisible, setIsVisible}) => {
 
     // full solution on how to use intersection observer api
     // to animate on viewport intersection
@@ -9,7 +9,7 @@ const Reviews = () => {
 
     const containerRef = useRef(null) 
     
-    const [ isVisible, setIsVisible ] = useState(false)
+
     
     const callBackFunction = (entries) => {
         const [ entry ] = entries

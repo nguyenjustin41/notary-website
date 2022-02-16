@@ -10,7 +10,7 @@ dotenv.config()
 
 const PORT = process.env.PORT;
 app.use(cors({
-  origin: "https://dreamy-mirzakhani-2092fd.netlify.app",
+  origin: "https://jnnotary.netlify.app",
   methods: ["GET", "POST"],
 }
 

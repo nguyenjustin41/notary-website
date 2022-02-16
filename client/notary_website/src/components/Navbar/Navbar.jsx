@@ -80,11 +80,20 @@ const Navbar = ( { show, setShow } ) => {
 
 
             <div className="hidden lg:flex flex-row space-between items-center list-none text-center mr-[0px]">
+              
               <button onClick={() => window.open('tel:6265665705', '_self')} 
               className="space-x-2 rounded-[10px] font-semibold text-[16px] text-white outline-hidden flex items-center cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover hover:text-yellow-400 ">
-               
-                  <span className="text-white">Call Now</span>
+     
+  
+
+                  <span className="text-white">
+                    (626)-566-5705
+
+                  </span>
+     
                   <FaPhone alt="phone icon" className=""/>
+
+
              
               
               

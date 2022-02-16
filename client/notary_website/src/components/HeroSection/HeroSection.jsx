@@ -7,7 +7,7 @@ const HeroSection = () => {
 
               <div id="hero-section" className="mobile-hero-section grid grid-cols-2 place-items-center place-content-center w-full h-full overflow-visible max-w-[1010px] gap-[5%]">
                     <div className="place-items-center place-content-center h-[100%]">
-                        <h1 className="mobile-hero-header text-left -tracking-[0.64px] text-[48px] text-[#363f41] leading-[52px] mb-[20px] font-semibold max-w-[20ch] px-4">The best mortgage closing experience guaranteed</h1>
+                        <h1 className="mobile-hero-header text-left -tracking-[0.64px] text-[48px] text-[#363f41] leading-[52px] mb-[20px] font-semibold max-w-[20ch] px-4">The best mobile closing experience guaranteed</h1>
                         <p className="mobile-hero-text text-left text-[24px] leading-[33px] mb-[25px] font-normal px-4">Reliable and timely service, my closing process delivers the best closing experience to every signer, escrow, and mortgage officer.</p>
                         <div className="ml-[3%] mobile-hero-button">
                             <a id="hero-button" href="#contact" className="block w-[264px] font-semibold cursor-pointer text-center rounded-[50px] text-[16px] text-white outline-hidden transition-all linear duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Request a Quote</a>

@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+
 import Axios from 'axios';
 
 
@@ -7,6 +8,7 @@ import Axios from 'axios';
 
 const Contact = ({isVisible, setIsVisible}) => {
     const containerRef = useRef(null)
+
     const callBackFunction = (entries) => {
         const [ entry ] = entries
 
@@ -78,6 +80,9 @@ const Contact = ({isVisible, setIsVisible}) => {
         // console.log(newData)
     }   
 
+
+
+
     function clear() {
         setData({name: '', email: '', company: '', mortgage: '', phone: '', message: ''})
         // reset the select menu on clear
@@ -93,14 +98,11 @@ const Contact = ({isVisible, setIsVisible}) => {
     const handleSubmit = (e) => {
         // refreshes the page if we don't prevent default
         e.preventDefault();
-        
-        clear()
-        
-        const email = document.getElementById("email").value
-        console.log(email)
+
+            
         setSubmitted(true)
-
-
+    
+    
         Axios.post(url, {
             name: data.name, 
             company: data.company,
@@ -109,10 +111,9 @@ const Contact = ({isVisible, setIsVisible}) => {
             mortgage: data.mortgage, 
             message: data.message
         })
-
-   
-
-
+    
+            clear()
+     
         
     }
 
@@ -183,11 +184,11 @@ const Contact = ({isVisible, setIsVisible}) => {
                             <div className='h-[100%] w-[100%] '>
                                 <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="mt-[2%] px-[2%] pb-[2%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='*Message'></textarea>
                             </div>
-
+         
                             <div className='mobile-contact-submit flex flex-row h-[100%] w-[100%]'>
                                 <button type="submit" className="flex flex-row justify-center items-center w-[100%] shadow-lg rounded-[px] font-semibold text-[2rem] text-white outline-hidden cursor-pointer transition-all ease-in-out duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Submit</button>
                             </div>
-
+                            
                         </form>
                     </div>
             }

@@ -31,7 +31,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center h-[100%] w-[100%] px-[5%] pb-[5%]  xl:p-[5%] ">
-                <h1 className="-tracking-[0.64px] text-[32px] leading-[52px] font-semibold text-black mb-[2%] xl:mb-[10%] xl:mb-[3%] underline">Areas of Service</h1>
+                <h1 className="-tracking-[0.64px] text-[32px] leading-[52px] font-semibold text-black mb-[2%] xl:mb-[5%] xl:mb-[3%] underline">Areas of Service</h1>
                 <p className="text-center text-[26px] xl:text-[26px]">Arcadia, Temple City, San Gabriel, Sierra Madre, El Monte, Rosemead, Monrovia, Pasadena, San Marino, Duarte, 
                 City Of Industry, Alhambra, Baldwin Park, South El Monte, South Pasadena, Monterey Park, Altadena, La Puente, Mount Wilson, West Covina, 
                 La Canada Flintridge, Azusa, Covina, Whittier, Montebello, Eagle Rock, Hacienda Heights, Pico Rivera, Glendale, Montrose, Glendora, La Crescenta, Maywood, 

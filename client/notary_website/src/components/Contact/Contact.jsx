@@ -59,9 +59,6 @@ const Contact = ({isVisible, setIsVisible}) => {
     const mortgageOptions = ['Select Mortgage Package', 'Refinance', 'Purchase', "Seller's Package", "Home Equity Loan", "Reverse Mortgage", "Other"]
     
 
-
-    
-
     function handleDataChange(e) {
         const newData = { ...data } 
         try {
@@ -79,8 +76,6 @@ const Contact = ({isVisible, setIsVisible}) => {
         setData(newData)
         // console.log(newData)
     }   
-
-
 
 
     function clear() {

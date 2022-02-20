@@ -56,22 +56,22 @@ const Navbar = ( { show, setShow } ) => {
               {
                 locationPath === '/' ?
               <ul className="hidden lg:flex items-center list-none text-center mr-[-22px]">
-              <li className="">
-                <a href="/about"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">About</a>
-              </li>
-              <li className="">
-                <a href="#process" className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Process</a>
-              </li>
-              <li className="">
-                <a href="#services"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Services</a>
-              </li>
-              <li className="">
-                <a href="/fees"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Fee Calculator</a>
-              </li>
+                <li className="">
+                  <a href="/about"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">About</a>
+                </li>
+                <li className="">
+                  <a href="#process" className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Process</a>
+                </li>
+                <li className="">
+                  <a href="#services"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Services</a>
+                </li>
+                <li className="">
+                  <a href="/fees"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Fee Calculator</a>
+                </li>
 
-              <li className="">
-                <a href="#contact" className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Contact</a>
-              </li>
+                <li className="">
+                  <a href="#contact" className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Contact</a>
+                </li>
               </ul> :
               ""
               }

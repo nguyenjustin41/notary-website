@@ -12,6 +12,10 @@ body {
   padding: 0;
   margin: 0;
   background-color: #e5ecee;
+  // removes the black box when selecting on input tag
+  :focus {
+    outline: 0;
+}
 
 
 }

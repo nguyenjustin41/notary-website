@@ -107,7 +107,7 @@ const Contact = ({isVisible, setIsVisible}) => {
             message: data.message
         })
     
-            clear()
+        clear()
      
         
     }

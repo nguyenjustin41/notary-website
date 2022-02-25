@@ -9,17 +9,16 @@ html {
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #e5ecee;
-  // removes the black box when selecting on input tag
-  :focus {
-    outline: 0;
-}
+    padding: 0;
+    margin: 0;
+    background-color: #e5ecee;
+    // removes the black box when selecting on input tag
+    :focus {
+      outline: 0;
+  }
 
 
 }
-
 
 #about-title {
   font-family: 'Comforter', cursive;
@@ -162,7 +161,7 @@ a {
 }
 .services-waves {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -182,7 +181,7 @@ a {
 
 .process-waves {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -202,7 +201,7 @@ a {
 
 .reviews-waves {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -222,7 +221,7 @@ a {
 
 .contact-waves {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -298,6 +297,11 @@ option:first-of-type {
   #contact {
     padding-top: 10%;
   }
+  #hero-div {
+    height: 100%;
+    flex: column;
+
+  }
 }
 
 
@@ -351,19 +355,21 @@ option:first-of-type {
     // width: 400px;
     // height: 400px;
   }
+
 }
 
 @media (max-width: 600px){
   
 
   #hero-div {
-    height: 65vh;
+
+    height: 100%;
     
   }
   #hero-section{
     grid-template-columns: repeat(1, minmax(0, 1fr));
     place-content: center;
-    padding-bottom: 200px; 
+
   }
 
   #hero-button{
@@ -371,9 +377,7 @@ option:first-of-type {
     margin-top: 3rem;
     
   }
-  #hero-svg {
-    display: none;
-  }
+
 }
 
 @media (max-width: 414px){
@@ -462,6 +466,10 @@ option:first-of-type {
     margin-left: 0px;
     font-size: 16px;
   }
+  #hero-div {
+    height: 90vh;
+    margin-bottom: 20%;
+  }
   
 }
 
@@ -475,7 +483,8 @@ option:first-of-type {
 
   }
   .mobile-hero-section {
-    margin-top: 25%;
+    margin-top: 0%;
+
   }
   .mobile-hero-header {
     text-align: center;
@@ -532,7 +541,12 @@ option:first-of-type {
 
 
 @media (max-width: 280px){
+  #home {
+    margin-top: 0%;
+  }
 
+
+  
   .mobile-navbar-logo {
     display: none;  
   }
@@ -544,7 +558,7 @@ option:first-of-type {
   }
 
   .mobile-hero-section {
-    margin-top: 65%;
+    margin-top: 0%;
   }
   .mobile-hero-header {
     text-align: center;

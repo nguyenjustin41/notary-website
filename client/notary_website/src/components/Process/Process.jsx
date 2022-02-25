@@ -9,7 +9,7 @@ const Process = () => {
   return (
 
    
-    <div id="process" className="flex flex-col relative justify-start items-center bg-button-color h-[100%] py-[5%] md:mt-[20%]">
+    <div id="process" className="flex flex-col relative justify-start items-center bg-button-color h-[100%] py-[5%] md:mt-[5%]">
 
         <div className="process-waves">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

@@ -140,34 +140,34 @@ const Contact = ({isVisible, setIsVisible}) => {
                         </div>
                         
                     </div> :
-                    <div className="flex flex-row justify-center items-center w-[100%] xl:w-[50%] lg:scale-110 bg-[#f4f4f4] rounded-[5px] shadow-lg h-[100%]">
+                    <div className="flex flex-row justify-center items-center w-[100%] xl:w-[100%] bg-[#f4f4f4] rounded-[5px] shadow-lg h-[100%]">
                         {/* container to hold all form inputs */}
                         <form onSubmit={(e) => handleSubmit(e)} className="mobile-contact-form flex flex-col w-[100%] justify-around items-between h-[100%]">
                             {/* name & company div */}
                             <div className='mobile-contact-info flex flex-row h-[100%] w-[100%]'>
 
-                                <div className="mobile-contact-info w-[50%] h-[100%] pb-[2%] ">
-                                    <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='*Name' required/>
+                                <div className="mobile-contact-info w-[100%] h-[100%] pb-[2%] sm:pr-[1%] ">
+                                    <input id="name" value={data.name} onChange={(e) => handleDataChange(e)} className="focus:border-[#123456] px-[8px] py-[18px] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='*Name' required/>
 
                                 </div>
-                                <div className="mobile-contact-info  w-[50%] h-[100%] pb-[2%]">
-                                    <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='Company'/>
+                                <div className="mobile-contact-info w-[100%] h-[100%] pb-[2%] sm:pl-[1%]">
+                                    <input id="company" value={data.company}  onChange={(e) => handleDataChange(e)} className="focus:border-[#123456] px-[8px] py-[18px] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='Company'/>
 
                                 </div>
                             </div>
                             {/* email & phone div */}
                             <div className='mobile-contact-info flex flex-row justify-center h-[100%] w-[100%] '> 
-                                <div className="mobile-contact-info  w-[50%] h-[100%] pb-[2%]">
-                                    <input id="email"  value={data.email} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='email' placeholder='*Email' required/>
+                                <div className="mobile-contact-info  w-[50%] h-[100%] pb-[2%] sm:pr-[1%]">
+                                    <input id="email"  value={data.email} onChange={(e) => handleDataChange(e)} className="focus:border-[#123456] px-[8px] py-[18px] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='email' placeholder='*Email' required/>
 
                                 </div>
-                                <div className="mobile-contact-info w-[50%] h-[100%] pb-[2%]">
-                                    <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="px-[5%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='Phone'/>
+                                <div className="mobile-contact-info w-[50%] h-[100%] pb-[2%] sm:pl-[1%]">
+                                    <input id="phone" value={data.phone} onChange={(e) => handleDataChange(e)} className="focus:border-[#123456] px-[8px] py-[18px] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='Phone'/>
 
                                 </div>
                             </div>
                             <div className='mobile-contact-select h-[100%] w-[100%] rounded-2xl '>
-                                <select id="mortgage" onChange={(e) => handleDataChange(e)} className="px-[2%] w-[100%] h-[100%] pb-[2%] bg-grey-color border-solid border-2 text-[1.5rem] lg:text-[2rem] " placeholder="Select Mortgage Package" name="types">
+                                <select id="mortgage" onChange={(e) => handleDataChange(e)} className="focus:border-[#123456] px-[8px] py-[18px] pt-[18px] pb-[10px] w-[100%] h-[100%] pb-[2%] bg-grey-color border-solid border-2 text-[1.5rem] lg:text-[1.5rem]" placeholder="Select Mortgage Package" name="types">
                                 
                                     {   
                                         // map(element, index) => [...]
@@ -177,7 +177,7 @@ const Contact = ({isVisible, setIsVisible}) => {
                                 </select>
                             </div>
                             <div className='h-[100%] w-[100%] '>
-                                <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="mt-[2%] px-[2%] pb-[2%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='*Message'></textarea>
+                                <textarea id="message" value={data.message} onChange={(e) => handleDataChange(e)} name="message" cols="40" rows="4" className="focus:border-[#123456] mt-[2%] px-[2%] pb-[2%] w-[100%] h-[100%] bg-grey-color border-solid border-2 text-[2rem]" type='text' placeholder='*Message'></textarea>
                             </div>
          
                             <div className='mobile-contact-submit flex flex-row h-[100%] w-[100%]'>

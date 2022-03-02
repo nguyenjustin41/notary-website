@@ -87,12 +87,12 @@ const Fees = () => {
     const [estimateInputs, setEstimateInputs] = useState({})
     // GOOGLE MAPS ADDRESS QUERY
     const [query, setQuery] = useState("");
+    const autoCompleteRef = useRef(null);
     // ZIP VARIABLE SENT TO BACKEND FOR DISTANCE CALCULATIONS 
     const [zip, setZip] = useState("");
 
     const [distanceMiles, setDistanceMiles] = useState(null)
 
-    const autoCompleteRef = useRef(null);
 
     const [totalFee, setTotalFee] = useState([]) 
 

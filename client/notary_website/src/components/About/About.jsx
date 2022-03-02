@@ -40,9 +40,9 @@ const About = () => {
                     <h1 className="-tracking-[0.64px] text-[32px] text-center leading-[52px] font-semibold text-white mb-[2%] xl:mb-[5%] xl:mb-[3%]">Areas of Service (Cities)</h1>
 
                 </div>
-            <div className="pb-[2%] h-[100%] w-[100%] px-[5%] pb-[5%] xl:py-[0%] xl:pb-[0%] xl:pr-[10%]">
+            <div className="h-[100%] w-[100%] px-[5%] pb-[5%] xl:py-[0%] xl:pb-[0%] xl:pr-[10%]">
 
-                <img className="p-[5%] scale-[1.1] xl:scale-[1.5] rounded-[50px] drop-shadow-lg" src="/assets/images/areas.PNG" alt="areas-of-coverage"/>
+                <img className="lg:p-[5%] scale-[1.0] xl:scale-[1.5] drop-shadow-lg" src="/assets/images/areas.PNG" alt="areas-of-coverage"/>
             </div>
 
             <div className="flex flex-col items-center justify-center h-[100%] w-[100%] px-[5%] pb-[5%]  xl:px-[5%] xl:py-[3%] ">

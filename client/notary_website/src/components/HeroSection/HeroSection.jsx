@@ -3,7 +3,7 @@ import React from 'react';
 const HeroSection = () => {
   return (
       <div id="home" className="my-[10%] md:mt-[5%]">
-          <div id="hero-div" className="flex bg-grey-color justify-center items-center px-[30px] h-[100%] relative z-[1]"> 
+          <div id="hero-div" className="flex bg-grey-color justify-center items-center mx-[30px] h-[100%] relative z-[1]"> 
           {/* grid grid-cols-2 place-items-center place-content-center */}
               <div id="hero-section" className="mobile-hero-section flex flex-col lg:flex-row items-center justify-center w-full h-full overflow-visible max-w-[1100px]">
                     <div className="h-[100%] w-[100%] flex flex-col justify-center items-center">

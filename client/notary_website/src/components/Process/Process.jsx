@@ -17,7 +17,7 @@ const Process = () => {
             </svg>
         </div>
         {/* Header */}
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center mx-[10%]">
             <h1 className="mobile-header -tracking-[0.64px] text-[64px] text-[#ffffff] mb-[50px] font-bold text-shadow" >How does it work?</h1>
 
         </div>

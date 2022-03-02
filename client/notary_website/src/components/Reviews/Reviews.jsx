@@ -103,30 +103,13 @@ const Reviews = ({isVisible, setIsVisible}) => {
                         </div>
                 
                 </div>
-                {/* show more button for mobile only */}
-
-                {
-                    showMore === false &&
-                    <div className="flex flex-row justify-center bg-[#123456] rounded-[10px] px-[10%] mt-[5%] py-[5%] sm:hidden" onClick={() => {setShowMore(true)}}>
-
-                        <h1 className="text-[white] text-[125%]">Show More</h1>
-
-                    </div> 
-
-                }
-
-                    {
-                        showMore ? 
-
-                        // 3rd review
-
-                        <>
-
-                       
-                
+              
+                    
+                    
+                    {/* 3rd Review */}
                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                            className= {isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] ml-[2%] mt-[2%] mr-[0%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
-                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40"}>
+                            className= {isVisible ? "hidden lg:mobile-review-bubble lg:bg-button-color lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:ml-[2%] lg:mt-[2%] lg:mr-[0%] lg:shadow-lg lg:cursor-pointer lg:transition-all lg:linear lg:duration-[3000ms] lg:opacity-100 lg:hover:bg-button-color-hover" :
+                            "lg:mobile-review-bubble lg:bg-button-color-hover lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:shadow-lg lg:cursor-pointer lg:opacity-0 lg:translate-y-40"}>
                     
                                 <div className="flex flex-row justify-start ">
                                     <img className=" mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-3.jpg" alt="pfp"/>
@@ -144,8 +127,8 @@ const Reviews = ({isVisible, setIsVisible}) => {
                        {/* 4th review */}
                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
                             
-                            className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] m-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover" :
-                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
+                            className= {isVisible ? "hidden lg:mobile-review-bubble lg:bg-button-color lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:ml-[2%] lg:mt-[2%] lg:mr-[0%] lg:shadow-lg lg:cursor-pointer lg:transition-all lg:linear lg:duration-[3000ms] lg:opacity-100 lg:hover:bg-button-color-hover" :
+                            "lg:mobile-review-bubble lg:bg-button-color-hover lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:shadow-lg lg:cursor-pointer lg:opacity-0 lg:translate-y-40"}>
                             
                         
                                 <div className="flex flex-row justify-start">
@@ -166,8 +149,8 @@ const Reviews = ({isVisible, setIsVisible}) => {
                         </div>
                         {/* 5th Review */}
                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                            className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] mr-[1%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover":
-                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40" }>
+                            className= {isVisible ? "hidden lg:mobile-review-bubble lg:bg-button-color lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:ml-[2%] lg:mt-[2%] lg:mr-[0%] lg:shadow-lg lg:cursor-pointer lg:transition-all lg:linear lg:duration-[3000ms] lg:opacity-100 lg:hover:bg-button-color-hover" :
+                            "lg:mobile-review-bubble lg:bg-button-color-hover lg:h-[100%] lg:w-[30%] lg:rounded-2xl lg:flex lg:flex-col lg:p-[2%] lg:shadow-lg lg:cursor-pointer lg:opacity-0 lg:translate-y-40"}>
                     
                                 <div className="flex flex-row justify-start">
                                     <img className="mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-4.png" alt="pfp"/>
@@ -184,11 +167,97 @@ const Reviews = ({isVisible, setIsVisible}) => {
                     
                         </div>
                         
-                        <div className="flex flex-row justify-center bg-[#123456] rounded-[10px] px-[10%] mt-[5%] py-[5%] sm:hidden" onClick={() => {setShowMore(false)}}>
+ 
+                {/* show more button for mobile only */}
+
+                {
+                    showMore === false &&
+                    <div className="flex flex-row justify-center bg-[#123456] rounded-[10px] px-[10%] mt-[5%] py-[5%] lg:hidden" onClick={() => {setShowMore(true)}}>
+
+                        <h1 className="text-[white] text-[125%]">Show More</h1>
+
+                    </div> 
+
+                }
+
+                    {
+                        showMore ? 
+
+                        // 3rd review
+
+                        <>
+
+                       
+                        <div>
+                            
+                        </div>
+                        <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
+                            className= {isVisible ? "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] ml-[2%] mt-[2%] mr-[0%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover lg:hidden" :
+                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40 lg:hidden"}>
+                    
+                                <div className="flex flex-row justify-start ">
+                                    <img className=" mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-3.jpg" alt="pfp"/>
+                                    <div className="flex flex-col items-start">
+                                        <h2 className="mobile-review-name text-[20px] text-[white] text-shadow">Patrick G.</h2>
+                                        <h3 className="text-[white]">San Gabriel, CA</h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p className="text-[white] mt-[3%] text-shadow">Justin provided awesome service for me and my fiancé. I needed a last minute notarized document for my personal business. I made an appointment with Justin and we were greeted with a smile! Overall, Justin provided excellent and quick service. Great price for a mobile notary, highly recommend!</p>
+                                </div>
+                    
+                        </div>
+                        
+                       {/* 4th review */}
+                        <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
+                            
+                            className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] m-[2%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover lg:hidden" :
+                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40 lg:hidden" }>
+                            
+                        
+                                <div className="flex flex-row justify-start">
+                                    <img className="mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-4.png" alt="pfp"/>
+                                    <div className="flex flex-col items-start">
+                                        <h2 className="mobile-review-name text-[20px] text-[white] text-shadow">Jing G.</h2>
+                                        <h3 className="text-[white]">Montebello, CA</h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p className="text-[white] text-shadow mt-[3%]">Very professional, courteous and efficient. Great service. I highly recommend him!
+
+                                        We had Justin to notarize our real estate loan documents at our house. He arrived on time and was very friendly. He was very patient to go over hundreds of pages of loan documents with us and so knowledgeable to explain the key information on each page and answered all our questions...
+
+                                    </p>
+                                </div>
+                        
+                        </div>
+                        {/* 5th Review */}
+                        <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
+                            className= {isVisible ?   "mobile-review-bubble bg-button-color h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] mr-[1%] shadow-lg cursor-pointer transition-all linear duration-[3000ms] opacity-100 hover:bg-button-color-hover lg:hidden":
+                            "mobile-review-bubble bg-button-color-hover h-[100%] w-[30%] rounded-2xl flex flex-col p-[2%] mt-[2%] shadow-lg cursor-pointer opacity-0 translate-y-40 lg:hidden" }>
+                    
+                                <div className="flex flex-row justify-start">
+                                    <img className="mr-[10px] rounded-full drop-shadow-lg" src="/assets/images/pfp-4.png" alt="pfp"/>
+                                    <div className="flex flex-col items-start">
+                                        <h2 className="mobile-review-name text-[20px] text-[white] text-shadow">Christina B.</h2>
+                                        <h3 className="text-[white]">Los Angeles, CA</h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p className="text-[white] text-shadow mt-[3%]">
+                                    During Covid-19, my family needed documents to be notarized immediately.  I did not want my aging parents to be at risk. Justin was very professional and wore a mask. I requested the signing to be outside in an open space.  Justin was very accommodating and friendly.  I would definitely recommend him to all family and friends.  The pricing is very reasonable.
+                                    </p>
+                                </div>
+                    
+                        </div>
+                 
+
+                        <div className="lg:hidden flex flex-row justify-center bg-[#123456] rounded-[10px] px-[10%] mt-[5%] py-[5%] lg:hidden" onClick={() => {setShowMore(false)}}>
 
                             <h1 className="text-[white] text-[125%]">Show Less</h1>
 
                         </div> 
+                     
                         
                         </> : ''
 

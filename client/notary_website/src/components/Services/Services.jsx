@@ -24,7 +24,7 @@ const Services = () => {
               
              
                   <div className="justify-start mt-[3%]">
-                      <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41] pb-[2rem] ">Mortgage Packages</h1>
+                      <h1 className="mobile-header-text text-[40px] font-bold text-[#363f41] pb-[2rem] ">Loan Packages</h1>
 
                   </div>
 
@@ -45,6 +45,7 @@ const Services = () => {
                       <FaMoneyCheckAlt className="mobile-icon-type hidden text-yellow-400 items-center text-[3rem]" />
                       <h2 className="mobile-text text-[32px] ml-[1rem] text-shadow ">Home Equity Loan</h2>
                     </div>
+
                   </div>
                 </div>
 
@@ -77,6 +78,7 @@ const Services = () => {
                     <FaCheck className="mobile-icon text-yellow-400 items-center text-[3rem]" />
                     <h2 className="mobile-text text-[32px] font-semibold ml-[1rem] text-shadow">Document Scanbacks</h2>
                   </div>
+
 
          
 

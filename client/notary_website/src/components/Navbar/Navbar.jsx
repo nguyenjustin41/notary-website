@@ -66,7 +66,7 @@ const Navbar = ( { show, setShow } ) => {
                   <a href="#services"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Services</a>
                 </li>
                 <li className="">
-                  <a href="/fees"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Fee Calculator</a>
+                  <a href="/fees"  className="text-black text-[20px] flex items-center px-6 cursor-pointer hover:text-button-color-hover transition ease-in-out duration-200">Quote</a>
                 </li>
 
                 <li className="">

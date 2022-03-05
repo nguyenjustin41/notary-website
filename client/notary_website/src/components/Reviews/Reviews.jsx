@@ -73,7 +73,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                         
                                 {/* 1st Review */}
                                     <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')} 
-                                            className={isVisible ? "bg-button-color h-[100%] w-[100%] md:w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer transition-none linear duration-[1000ms] opacity-100 hover:bg-button-color-hover" :
+                                            className={isVisible ? "bg-button-color h-[100%] w-[100%] md:w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer transition-none linear duration-[1000ms] opacity-100 md:hover:bg-button-color-hover" :
                                             "bg-button-color-hover h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer transition-none opacity-0" 
                                         }>
                                             
@@ -96,7 +96,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
         
         
                                     <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                                        className= {isVisible ? "bg-button-color h-[100%] w-[100%] md:w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer transition-none linear duration-[1000ms] opacity-100 hover:bg-button-color-hover" :
+                                        className= {isVisible ? "bg-button-color h-[100%] w-[100%] md:w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer transition-none linear duration-[1000ms] opacity-100 md:hover:bg-button-color-hover" :
                                         "bg-button-color-hover h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer opacity-0 "}>
                                 
                                             <div className="flex flex-row justify-start">
@@ -126,7 +126,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                     
                                     {/* 3rd Review */}
                                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                                            className= "bg-button-color h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] md:mt-[0%] shadow-lg cursor-pointer  hover:bg-button-color-hover">
+                                            className= "bg-button-color h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] md:mt-[0%] shadow-lg cursor-pointer  md:hover:bg-button-color-hover">
                                     
                                                 <div className="flex flex-row justify-start ">
                                                     <img className=" mr-[10px] rounded-full drop-shadow-lg h-[60px] w-[60px]" src="/assets/images/pfp-3.jpg" alt="pfp"/>
@@ -149,7 +149,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                                     {/* 4th review */}
                                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
                                             
-                                            className="bg-button-color h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%]  md:ml-[0%]  mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer hover:bg-button-color-hover">
+                                            className="bg-button-color h-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%]  md:ml-[0%]  mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer md:hover:bg-button-color-hover">
                                             
                                         
                                                 <div className="flex flex-row justify-start">
@@ -170,7 +170,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                                         </div>
                                         {/* 5th Review */}
                                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                                            className=  "bg-button-color h-[100%]  rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer hover:bg-button-color-hover"
+                                            className=  "bg-button-color h-[100%]  rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] lg:mt-[0%] shadow-lg cursor-pointer md:hover:bg-button-color-hover"
                                             >
                                     
                                                 <div className="flex flex-row justify-start">
@@ -189,7 +189,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                     
                                         </div>
                                         <div className="flex flex-row justify-center items-center w-[100%] mt-[5%]">
-                                            <div className="flex flex-row justify-center bg-[#123456] w-[100%] rounded-[10px] mx-[30%] lg:mx-[40%] hover:bg-button-color-hover  cursor-pointer" onClick={() => {setShowMore(!showMore)}}>
+                                            <div className="flex flex-row justify-center bg-[#123456] w-[100%] rounded-[10px] mx-[30%] lg:mx-[40%] md:hover:bg-button-color-hover  cursor-pointer" onClick={() => {setShowMore(!showMore)}}>
 
                                                     <h1 className="text-[white] justify-center items-center text-[125%] py-[7%] text-center whitespace-nowrap">Show Less</h1>
                                             </div> 
@@ -208,7 +208,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                         
                                     {/* 1st Review */}
                                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')} 
-                                                className={isVisible ? "bg-button-color h-[100%] w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer transition-all linear duration-[0ms] lg:duration-[1000ms] opacity-100 hover:bg-button-color-hover" :
+                                                className={isVisible ? "bg-button-color h-[100%] w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] shadow-lg cursor-pointer transition-all linear duration-[0ms] lg:duration-[1000ms] opacity-100 hover:duration-[0ms] md:hover:bg-button-color-hover" :
                                                 "opacity-0 translate-y-40 p-[5%] md:p-[2%]" 
                                             }>
                                                 
@@ -231,7 +231,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
             
             
                                         <div onClick={() => window.open('https://www.yelp.com/biz/justin-nguyen-mobile-notary-public-arcadia?utm_campaign=read_more&utm_medium=embedded_review')}  
-                                            className= {isVisible ? "bg-button-color h-[100%] w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] md:mt-[0%] shadow-lg cursor-pointer transition-all linear duration-[0ms] lg:duration-[2000ms] opacity-100 hover:bg-button-color-hover" :
+                                            className= {isVisible ? "bg-button-color h-[100%] w-[100%] rounded-2xl flex flex-col p-[5%] md:p-[2%] mt-[2%] md:mt-[0%] shadow-lg cursor-pointer transition-all linear duration-[0ms] lg:duration-[2000ms] opacity-100 hover:duration-[0ms] md:hover:bg-button-color-hover" :
                                             "opacity-0 translate-y-40 p-[5%] md:p-[2%]"}>
                                     
                                                 <div className="flex flex-row justify-start">
@@ -250,7 +250,7 @@ const Reviews = ({isVisible, setIsVisible}) => {
                                     </div>
                                             
                                         <div className="flex flex-row w-[100%] justify-center items-center mt-[5%]">
-                                            <div className="flex flex-row justify-center bg-[#123456] w-[100%] rounded-[10px] mx-[30%] lg:mx-[40%] hover:bg-button-color-hover  cursor-pointer" onClick={() => {setShowMore(!showMore)}}>
+                                            <div className="flex flex-row justify-center bg-[#123456] w-[100%] rounded-[10px] mx-[30%] lg:mx-[40%] md:hover:bg-button-color-hover cursor-pointer" onClick={() => {setShowMore(!showMore)}}>
 
                                                     <h1 className="text-[white] justify-center items-center text-[125%] py-[7%] text-center whitespace-nowrap">Show More</h1>
                                             </div> 

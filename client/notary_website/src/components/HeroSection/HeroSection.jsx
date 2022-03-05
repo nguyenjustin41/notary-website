@@ -11,7 +11,7 @@ const HeroSection = () => {
                         
                         <p className="mobile-hero-text text-center lg:text-left text-[24px] leading-[33px] mb-[25px] font-normal px-4">Reliable and timely service, my closing process delivers the best closing experience to every signer, escrow, and mortgage officer.</p>
                         <div className="lg:ml-[3%] flex flex-row justify-center lg:justify-start mobile-hero-button w-[100%]">
-                            <a id="hero-button" href="#contact" className="block w-[264px] font-semibold cursor-pointer text-center rounded-[50px] text-[16px] text-white outline-hidden transition-all linear duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow hover:bg-button-color-hover">Request a Quote</a>
+                            <a id="hero-button" href="#contact" className="block w-[264px] font-semibold cursor-pointer text-center rounded-[50px] text-[16px] text-white outline-hidden transition-all linear duration-200 bg-button-color whitespace-nowrap px-[22px] py-[10px] text-shadow md:hover:bg-button-color-hover">Request a Quote</a>
 
                         </div>
                     </div>

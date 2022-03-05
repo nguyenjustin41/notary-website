@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
       <div id="home" className="my-[10%] md:mt-[5%]">
-          <div id="hero-div" className="flex bg-grey-color justify-center items-center mx-[30px] h-[100%] relative z-[1]"> 
+          <div id="hero-div" className="flex bg-grey-color justify-center items-center mx-[30px] h-[100%] relative z-[1] mt-[10%] sm:mt-[0%]"> 
           {/* grid grid-cols-2 place-items-center place-content-center */}
               <div id="hero-section" className="mobile-hero-section flex flex-col lg:flex-row items-center justify-center w-full h-full overflow-visible max-w-[1100px]">
                     <div className="h-[100%] w-[100%] flex flex-col justify-center items-center">
@@ -57,12 +57,12 @@ const HeroSection = () => {
                     </div>
                         {
                             show ? 
-                            <div id="hero-svg" className="h-full flex flex-col lg:flex-row justify-center items-center mt-[10%] ml-[10%] lg:mt-[0%] lg:ml-[0%] relative">
+                            <div id="hero-svg" className="h-full flex flex-col lg:flex-row justify-center items-center mt-[0%] sm:mt-[5%] ml-[10%] lg:mt-[0%] lg:ml-[0%] relative">
                             
                             
                             
                                 
-                                    <div className={show ? "scale-[1]" : "hidden"}>
+                                    <div className={show ? "scale-[0.8] sm:scale-[1]" : "hidden"}>
                                             <svg width="500" height="500" id={show ? "hero-svg-animate" : ''} viewBox="0 0 619 615" fill="none" xmlns="http://www.w3.org/2000/svg" className="overflow-visible">
                                                 <g id="undraw_agreement_re_d4dv 1">
                                                 {/* className="animate-[bounce_3000ms_ease-in-out_infinite]" */}

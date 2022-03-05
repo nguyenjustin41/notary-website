@@ -183,7 +183,7 @@ a {
 
 .process-waves {
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -311,7 +311,9 @@ option:first-of-type {
 
 @media (max-width: 845px){
 
-
+  .mobile-hero-header {
+    min-width: max-content;
+  }
   .mobile-contact-container {
     padding-left: 10%;
     padding-right: 10%;
@@ -338,6 +340,12 @@ option:first-of-type {
     font-size: 40px;
   }
 
+
+  .mobile-hero-text {
+    width: 40ch;
+
+  }
+
   #reviews {
     padding-top: 10%;
   }
@@ -351,11 +359,8 @@ option:first-of-type {
     padding-top: 10%;
   }
   #hero-svg {
-    // display: none;
     transform: scale(0.8);
    
-    // width: 400px;
-    // height: 400px;
   }
 
 }
@@ -374,12 +379,10 @@ option:first-of-type {
 
   }
 
-  #hero-button{
-    width: 100%;
-    margin-top: 3rem;
-    
-  }
 
+  .mobile-hero-text {
+    width: 35ch;
+  }
 }
 
 @media (max-width: 414px){
@@ -397,6 +400,7 @@ option:first-of-type {
   
   }
   
+
   .mobile-contact-select {
     height: 50%;
   }
@@ -461,14 +465,21 @@ option:first-of-type {
     text-align: center;
     
   }
+
+  .mobile-hero-text {
+    width: 28ch;
+
+  }
+  .mobile-hero-header{
+    min-width: max-content;
+  }
   .mobile-text {
     text-align: center;
     margin-left: 0px;
     font-size: 16px;
   }
   #hero-div {
-    height: 90vh;
-    margin-bottom: 20%;
+    height: 100%;
   }
   
 }

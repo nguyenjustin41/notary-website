@@ -7,25 +7,21 @@ const HeroSection = () => {
   // timing the mobile animation experience for the hero svg
   const [show, setShow] = useState(null)
 
-  const [width, setWidth] = useState(768)
-  const isMobile = width <= 768;
+  const [width, setWidth] = useState(window.innerWidth)
+  
   function handleWindowSizeChange(){
       setWidth(window.innerWidth);
-
-  }
-  // sets the window resize event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
     
-    return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
+      
     }
-    }, [])
+  
+
 
 
   const handleScroll = () => {
     const position = window.pageYOffset;
-    if (position > 50 && isMobile) {
+    
+    if (position > 50) {
       
       setShow(true)
     } else if(width >= 768) {
@@ -35,9 +31,17 @@ const HeroSection = () => {
   }
   useEffect(() => {
    
-
+    window.addEventListener('resize', handleWindowSizeChange);
     window.addEventListener('scroll', handleScroll)
 
+    if (width > 768) {
+        setShow(true)
+    }
+
+    console.log(width)
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
 
   }, [])
 
@@ -62,7 +66,7 @@ const HeroSection = () => {
                             
                             
                                 
-                                    <div className={show ? "scale-[0.8] sm:scale-[1]" : "hidden"}>
+                                    <div className={show ? "scale-[0.9] sm:scale-[1]" : "invisible"}>
                                             <svg width="500" height="500" id={show ? "hero-svg-animate" : ''} viewBox="0 0 619 615" fill="none" xmlns="http://www.w3.org/2000/svg" className="overflow-visible">
                                                 <g id="undraw_agreement_re_d4dv 1">
                                                 {/* className="animate-[bounce_3000ms_ease-in-out_infinite]" */}

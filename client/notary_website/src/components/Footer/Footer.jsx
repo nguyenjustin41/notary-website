@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <>
         {
-        locationPath === '/legal' ? '' 
+        locationPath === '/legal' || locationPath === '/fees' || locationPath === '/about' ? '' 
         :
 
         <div className="h-[100%] w-[100%] flex flex-row justify-center">

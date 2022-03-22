@@ -7,9 +7,9 @@ const Mobilebar = ({setShow, show}) => {
     return (
             <aside className={show ? 'top-0 fixed z-[1000]  w-full h-full grid items-center top-0 left-0 transition-all ease-in duration-[200ms] bg-[#e5ecee]' 
             : '-top-full fixed w-full h-full z-[1000] grid items-center left-0 transition-all ease-in-out duration-[200ms] bg-[#e5ecee]'  }>    
-                <div className="absolute top-[1.2rem] right-[1.5rem] bg-transparent cursor-pointer text-[2rem] outline-hidden">
+                <div className="absolute top-[1.2rem] right-[1.5rem] bg-transparent cursor-pointer text-[2rem] outline-hidden" onClick={() => setShow(!show)}>
                 
-                    <FaTimes className="text-[#363f41] hover:text-button-color-hover" onClick={() => setShow(!show)}/>
+                    <FaTimes className="text-[#363f41] hover:text-button-color-hover"/>
                 </div>
                 <div className="text-[#363f41] gap-y-12 flex flex-col items-center justify-center text-[40px] transition-all ease-in-out duration-200 sm:gap-y-2">
 

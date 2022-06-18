@@ -4,7 +4,7 @@ let timelineElements = [
       title: "Schedule Appointment",
    
       description:
-        "Schedule appointment via call, text, or email and establish a preferred method of communication. Signing can be take place either in an office or at the signer's address of choice.",
+        "Schedule appointment via call, text, or email and establish a preferred method of communication. Signing can take place either in an office or at the signer's address of choice.",
       buttonText: "View Frontend Projects",
       step: "Step 1",
       icon: "bell",

@@ -3,20 +3,21 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import sgMail from '@sendgrid/mail'
 import zipcodes from 'zipcodes'
-
+import statusMonitor from 'express-status-monitor'
 const app = express();
 
 dotenv.config()
 
 const PORT = process.env.PORT;
+//utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
 app.use(cors({
   origin: "https://jnnotary.netlify.app",
   methods: ["GET", "POST"],
-}
+
+})); 
 
 
-)); //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
-
+app.use(statusMonitor())
 app.use(express.json()) // accept data in json format
 app.use(express.urlencoded()); // decode data sent thru html form 
 // app.use('/fees', feesRoutes)

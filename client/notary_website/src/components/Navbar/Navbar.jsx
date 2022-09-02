@@ -16,7 +16,7 @@ const Navbar = ( { show, setShow } ) => {
   return (
       <> 
         <nav className="relative transition-all ease-in-out duration-700 z-[102] h-[80px] w-[100%] fixed flex flex-wrap items-center text-base justify-center px-0 py-5 text-white bg-white shadow-lg ">
-          <div className="mobile-navbar-container flex justify-center fixed sm:relative md:flex justify-between px-[24px] h-max z-[1] w-full max-w-[1100px] bg-white py-5 sm:py-0 shadow-lg sm:shadow-none ">
+          <div className="mobile-navbar-container flex justify-center fixed sm:relative md:flex items-center justify-between px-[24px] z-[1] w-full max-w-[1100px] bg-white py-5 sm:py-0 shadow-lg sm:shadow-none ">
 
             <a href="/" className="mobile-navbar-logo flex text-black gap-x-[5px] justify-self-start pb-[5px] cursor-pointer text-xl items-center font-bold text-[26px] hover:text-button-color-hover" alt="black pen icon">JN Notary <span className="text-[26px] mb-[20px]"><FaPenAlt /></span></a>
 
@@ -36,7 +36,7 @@ const Navbar = ( { show, setShow } ) => {
             </div>
             {
               locationPath === '/' || locationPath === '/about' || locationPath === '/fees' ?  
-                <div className="mobile-navbar-hamburger text-black flex text-[1.8rem] pt-[4px] cursor-pointer  hover:text-button-color-hover lg:hidden">
+                <div className="mobile-navbar-hamburger text-black flex items-center text-[1.8rem] pt-[4px] cursor-pointer  hover:text-button-color-hover lg:hidden">
                 
                     <FaBars alt="menu icon" onClick={() => setShow(!show)}/>
                 

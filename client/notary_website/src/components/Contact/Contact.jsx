@@ -39,7 +39,7 @@ const Contact = ({isVisible, setIsVisible}) => {
     },);
   // https://notary-website.onrender.com
     // URL TO BACKEND
-    const url = "http://localhost:5000"
+    const url = "https://notary-website.onrender.com"
     
 
     const [submitted, setSubmitted] = useState(false)    

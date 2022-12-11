@@ -37,8 +37,9 @@ const Contact = ({isVisible, setIsVisible}) => {
         observer.observe(contactHeader)
         
     },);
-
-    const url = "https://jn-notary.herokuapp.com"
+  // https://notary-website.onrender.com
+    // URL TO BACKEND
+    const url = "http://localhost:5000"
     
 
     const [submitted, setSubmitted] = useState(false)    

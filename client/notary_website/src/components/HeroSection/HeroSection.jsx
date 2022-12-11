@@ -46,7 +46,7 @@ const HeroSection = () => {
   }, [])
 
   return (
-      <div id="home" className="my-[10%] md:mt-[5%]">
+      <div id="home" className="my-[5%] md:mt-[2%]">
           <div id="hero-div" className="flex bg-grey-color justify-center items-center mx-[30px] h-[100%] relative z-[1] mt-[10%] sm:mt-[0%]"> 
           {/* grid grid-cols-2 place-items-center place-content-center */}
               <div id="hero-section" className="mobile-hero-section flex flex-col lg:flex-row items-center justify-center w-full h-full overflow-visible max-w-[1100px]">

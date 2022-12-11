@@ -11,6 +11,7 @@ dotenv.config()
 const PORT = process.env.PORT;
 //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
 app.use(cors({
+  // https://jnnotary.netlify.app
   origin: "https://jnnotary.netlify.app",
   methods: ["GET", "POST"],
 
@@ -250,6 +251,7 @@ app.post('/', (req, res) => {
 
 
     const fullMessage = `${name} is requesting a ${mortgage} signing. ${message} // ${company} ${phone} ${email}`
+    console.log(fullMessage)
     const msg = {
         to: process.env.EMAIL,
         from: process.env.EMAIL,

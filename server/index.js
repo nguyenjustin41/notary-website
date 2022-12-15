@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(cors({
 
   // https://jnnotary.netlify.app
-  origin: "http://localhost:3000",
+  origin: "https://jnnotary.netlify.app",
   methods: ["GET", "POST"],
 
 })); 

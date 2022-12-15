@@ -11,8 +11,9 @@ dotenv.config()
 const PORT = process.env.PORT;
 //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
 app.use(cors({
+
   // https://jnnotary.netlify.app
-  origin: "https://jnnotary.netlify.app",
+  origin: "http://localhost:3000",
   methods: ["GET", "POST"],
 
 })); 
@@ -281,6 +282,7 @@ app.post('/', (req, res) => {
 app.post('/fees', (req, res) => {
   const myZip = process.env.ZIP_CODE;
 
+  console.log('hello')
   try {
     // receives the zip code from the user input when you press submit button
     const { zip } = req.body

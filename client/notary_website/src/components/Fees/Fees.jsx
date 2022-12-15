@@ -75,8 +75,10 @@ async function handlePlaceSelect(setQuery, setZip) {
 
 
 const Fees = () => {
-    // VARIABLES TO DISPLAY RESULTS WITH
-    let url = "https://jn-notary.herokuapp.com/fees"
+    // VARIABLES TO DISPLAY RESULTS WITH 
+    // https://notary-website.onrender.com/fees lives site
+    // http://localhost:5000/fees for testing 
+    let url = "https://notary-website.onrender.com/fees"
     
     const mortgageOptions = ["Misc.", "Single Page", "Refinance", "Purchase", "Seller's Package", "Home Equity Loan", "Reverse Mortgage"]
   

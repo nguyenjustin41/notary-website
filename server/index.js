@@ -10,13 +10,13 @@ dotenv.config()
 
 const PORT = process.env.PORT;
 //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
-app.use(cors({
-
+const corsOptions = {
   // https://jnnotary.netlify.app
   origin: "https://jnnotary.netlify.app",
   methods: ["GET", "POST"],
-
-})); 
+  credentials: true
+}
+app.use(cors(corsOptions)); 
 
 
 app.use(statusMonitor())
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/', (req, res) => {
-    
+
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     console.log(req.body)
     const { name, company, email, phone, mortgage, message } = req.body
